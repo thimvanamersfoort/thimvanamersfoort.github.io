@@ -1,0 +1,21 @@
+{
+  "name": "github-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "build": "tailwind -i ./src/tailwind.css -o ./assets/css/tailwind.css",
+    "format": "prettier --write .",
+    "lint": "eslint --fix-dry-run --ext .js \"**/*.js\" "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1",
+    "tailwindcss": "^3.0.9"
+  }
+}
