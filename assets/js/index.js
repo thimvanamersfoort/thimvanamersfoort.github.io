@@ -24,7 +24,7 @@ function type() {
 
     .typeString('Mijn naam is Thim van Amersfoort.')
     .pasteString('<br>').pauseFor(800)
-    .typeString('Een Junior Software developer met interesses in Javascript en Web Development.')
+    .typeString('Een Junior Software developer met interesses in netwerktechnologie, Native App development en Full Stack Web Development.')
 
     .pasteString('<br>').pauseFor(400)
     .pasteString('<br>').pauseFor(400)
@@ -62,4 +62,4 @@ type();
 
 setInterval(() => {
   type();
-}, 30000);
+}, 35000);
