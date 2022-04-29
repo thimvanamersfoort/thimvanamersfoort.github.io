@@ -2,7 +2,7 @@ module.exports = {
 	mode: 'jit',
 	purge: {
 		enabled: true,
-		content: ['./views/*.html', './views/**/*.html'],
+		content: ['**/*.html', '*.html'],
 	},
 	darkMode: 'media', // or 'media' or 'class'
 	theme: {
@@ -45,7 +45,10 @@ module.exports = {
 			weight: ['hover'],
 			shadow: ['hover', 'focus'],
 			font: ['hover', 'focus'],
+      padding: ['hover']
 		},
 	},
-	plugins: [],
+	plugins: [
+    require('@tailwindcss/forms')
+  ],
 };

@@ -1,6 +1,7 @@
 {
 	"ext": "js, html, json",
 	"events": {
-		"restart": "npm run build"
+		"restart": "npm run build",
+    "start": "npm run build"
 	}
 }

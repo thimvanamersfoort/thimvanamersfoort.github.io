@@ -12,14 +12,14 @@ module.exports = {
 	rules: {
 		'default-case-last': ['warn'],
 		'default-param-last': ['error'],
-		eqeqeq: ['error', 'always'],
-		'func-style': ['warn', 'expression'],
+		'eqeqeq': ['error', 'always'],
+		'func-style': ['warn', 'declaration'],
 		'no-alert': ['warn'],
 		'no-console': ['warn'],
 		'no-confusing-arrow': ['error', { allowParens: true }],
 		'no-eval': ['error'],
 		'no-floating-decimal': ['warn'],
 		'no-lonely-if': ['warn'],
-		yoda: ['error', 'never'],
+		'yoda': ['error', 'never'],
 	},
 };
