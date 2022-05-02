@@ -14,59 +14,52 @@
   <link rel="shortcut icon" href="/assets/img/icon.ico" type="image/x-icon">
 
   <!-- Title -->
-  <title>Over mij | Thim van Amersfoort</title>
+  <title>Bandersnatch | Thim van Amersfoort</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/tailwind.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
-
 <body>
-
+  
   <main id="background" class="bg-gradient-to-br from-blue-500 via-indigo-600 to-cyan-500 flex flex-col min-h-screen">
 
-    <!-- Prose container -->
-    <article class="prose mt-16 prose-xs:rounded-lg prose-invert mx-auto p-6 bg-gray-900/40 prose-p:text-gray-100 prose-img:rounded-lg">
+    <div class="mx-auto prose mt-16 prose-invert prose-p:text-gray-100 prose-img:mx-auto p-6 bg-gray-900/40 rounded-lg prose-figcaption:mt-0">
+      
+      <img src="/assets/img/bandersnatch/logo.gif" alt="">
+      <img src="/assets/img/bandersnatch/play.png" alt="">
 
-      <h1><code>Hello World</code></h1>
+      <h1>Een van mijn eerste grote Softwareprojecten</h1>
+      <p>Na het vak informatica gekozen te hebben in 4VWO, werden we er eigenlijk al gelijk in het diepe gegooid.
+        Na een korte uitleg in HTML en CSS begonnen we klassikaal aan C#. Ik was zeer geïnteresseerd en bij de eindopdracht
+        van die periode sprak ik ook met mezelf af iets indrukwekkends neer te zetten.
+      </p>
 
-      <img src="/assets/img/me.jpg" class="grayscale">
+      <p>De film <i>Bandersnatch</i> op Netflix kwam toen net uit, die gebaseerd was op de optie dat de kijker zijn eigen 
+        verhaal kon kiezen. Mijn idee was om door te breien op dit concept, en een game te creëren waarbij de speler zijn eigen verhaal
+        kan volgen, met verschillende keuzes en eindes. Zo zou een simpel spelletje uren speeltijd op kunnen leveren, door de constante 
+        nieuwe opties en verhaalpaden voor de speler om te ontdekken.
+      </p>
 
-      <p>Mijn naam is Thim van Amersfoort. 17 jaar oud, en een grote interesse in Informatica en Software Development. 
-        Deze interesse kwam eigenlijk al van jongs af aan. Altijd was ik wel met technologie bezig, maar tot een paar 
-        jaar geleden niet echt een hobby of passie in kunnen vinden. </p>
+      <h2>Hoe werkt het?</h2>
+      <img src="/assets/img/bandersnatch/start.png" alt="">
 
-      <p>Ik zit nu in het 5e jaar VWO op het d'Oultremontcollege, en toen ik in 4VWO voor het vak informatica kon kiezen,
-        was mijn interesse wel gewekt. Hier bleek ik ook al gauw aanleg voor te hebben en ik begon er tijd aan te besteden
-        buiten de lessen, om door te groeien en meer te leren.
+      <p>De speler heeft verschillende keuzes in het verhaal. Vantevoren heb ik, samen met de klasgenoot waarmee ik dit project deed, het
+        verhaal volledig uitgeschreven. Alle opties, karakters, omgevingen en verhaallijnen waren hiermee al bepaald, en moesten we het alleen
+        nog maar inprogrammeren.
       </p>
 
       <p>
-        Vanaf toen ben ik het als een hobby begonnen te zien en heb ik in de loop van ong. de afgelopen 2.5 jaar veel tijd gehad 
-        (<i>en in gestoken</i>) om mezelf te kunnen verbeteren op het gebied van computertechnologie.
+        De karakters zijn allemaal zelfgemaakte <i>Pixel-Arts</i> en om de retro-sfeer erin te houden, hebben we de achtergronden ook zelf gemaakt,
+        op basis van een <i>Minecraft</i> representatie van de gamelevels. Het design van de game is ook het meeste handmatige werk gaan zitten.
       </p>
 
-      <blockquote>
-        Mijn interesses liggen (<i>op dit moment</i>) vooral nog in de Full-Stack Web Development, maar ook Native App Development,
-        computerhardware en netwerktechnologie spreken me erg aan. Ik heb veel interesse om door te groeien in deze branche en 
-        zeg nooit nee tegen een kans om nieuwe ervaringen op te doen.
-      </blockquote>
-
-      <h3>Wat is er te vinden op deze website?</h3>
-
-      <p>Na wat meer van mij gehoord te hebben, heb je wellicht interesse om wat werk te zien. Links naar mijn Github en LinkedIn 
-        zijn te vinden aan de voet van elke pagina, en op de hoofdpagina vind je de verschillende projecten waar ik in de loop van 
-        de tijd mee bezig ben geweest.
-      </p>
-
-      <p>Mocht je me willen bereiken, stuur me gerust een berichtje via LinkedIn!</p>
+      <img src="/assets/img/bandersnatch/pixel-art.gif" class="!mb-4 !mt-0" alt="">
+      <figcaption><i>Zelfgemaakte Pixel-Art voor Bandersnatch</i></figcaption>
       
-      <p><i>Groetjes, Thim <br> 🚀🚀</i></p>  
 
-      
-      
-    </article>
+    </div>
 
     <!-- Footer container -->
     <footer class="h-32 from-transparent to-gray-900/90 bg-gradient-to-b mt-auto flex items-center">
@@ -121,14 +114,14 @@
   
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.halo.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script> 
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
 
     AOS.init({ once: true, duration: 650 })
 
-    const background = VANTA.HALO({
+    const background = VANTA.WAVES({
       el: '#background',
       mouseControls: true,
       touchControls: true,
@@ -137,44 +130,24 @@
       minWidth: 200.00,
       scale: 1.00,
       scaleMobile: 1.00,
-      // color: 0x43169d, // 501ab9 , 4918aa , 43169d, 3e1590
-      // shininess: 30.00,
-      // waveHeight: 10.00,
-      // waveSpeed: 1.4,
-      // zoom: 0.7
-      xOffset: 0.42,
-      size: 2.2,
-      yOffset: 0.2,
-      backgroundColor: 0x250060
+      color: 0x43169d, // 501ab9 , 4918aa , 43169d
+      shininess: 30.00,
+      waveHeight: 10.00,
+      waveSpeed: 1.4,
+      zoom: 0.7
     })
 
-
-
-    if(window.innerWidth <= 640) background.setOptions({ 
-      xOffset: 0,
-      yOffset: 0,
-      size: 1.5
-    })
-    else background.setOptions({
-      xOffset: 0.42,
-      yOffset: 0.2,
-      size: 2.2
-    })
+    if(window.innerWidth <= 640) background.setOptions({ waveSpeed: 0.9 })
+    else background.setOptions({ waveSpeed: 1.4 })
 
     window.addEventListener('resize', (e) => {
-      if(window.innerWidth <= 1024) background.setOptions({
-        xOffset: 0,
-        yOffset: 0,
-        size: 1.5
-      })
-      else background.setOptions({
-        xOffset: 0.42,
-        yOffset: 0.2,
-        size: 2.2 
-      })
+      if(window.innerWidth <= 1024) background.setOptions({ waveSpeed: 0.9 })
+      else background.setOptions({ waveSpeed: 1.4 })
     })
 
   </script>
-  
+
+
+
 </body>
 </html>
