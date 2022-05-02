@@ -37,6 +37,9 @@ module.exports = {
 				'vh-90': '90vh',
 				'vh-100': '100vh',
 			},
+      screens: {
+        'prose-xs': '563px'
+      }
 		},
 	},
 	variants: {
@@ -49,6 +52,7 @@ module.exports = {
 		},
 	},
 	plugins: [
-    require('@tailwindcss/forms')
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography')
   ],
 };

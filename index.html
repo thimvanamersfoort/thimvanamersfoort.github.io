@@ -18,6 +18,8 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/tailwind.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
@@ -44,7 +46,7 @@
               // Welkom op mijn portfolio website
             </p>
 
-            <a href="#" class="inline-block px-6 py-3 text-lg font-semibold rounded-lg bg-gray-900/30 border-2 border-gray-300 mt-6 text-white hover:text-fuchsia-400 hover:border-fuchsia-400 transition-all duration-300" >Meer over mij</a>
+            <a href="/about-me.html" class="inline-block px-6 py-3 text-lg font-semibold rounded-lg bg-gray-900/30 border-2 border-gray-300 mt-6 text-white hover:text-fuchsia-400 hover:border-fuchsia-400 transition-all duration-300" >Meer over mij</a>
 
           </div>
         </div>
@@ -109,17 +111,16 @@
       </div>
 
       <!-- Posts -->
-      <div class="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
+      <div class="mt-12 grid gap-y-8 gap-x-5 pt-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-y-12">
 
-        <a href="#" class="py-3 px-4 border-2 border-gray-300 rounded-xl bg-gray-900/30 hover:border-fuchsia-400 transition-all duration-300 group block">
+        <!-- Template -->
+        <a href="#" id="templatePost" class="hidden py-3 px-4 border-2 border-gray-300 rounded-xl bg-gray-900/30 hover:border-fuchsia-400 transition-all duration-300 group block" data-aos="fade-up">
 
           <!-- Text section -->
-          <div class="block mt-5">
-            <p class="text-xl font-semibold text-white group-hover:text-fuchsia-400 transition-all duration-300">
-              Boost your conversion rate
+          <div class="block mt-4">
+            <p id="templateTitle" class="text-2xl font-semibold text-white group-hover:text-fuchsia-400 transition-all duration-300">
             </p>
-            <p class="mt-3 text-base text-gray-300 font-mono leading-5">
-              Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.
+            <p id="templateDesc" class="mt-3 text-base text-gray-300 font-mono leading-5">
             </p>
           </div>
 
@@ -134,73 +135,12 @@
                 <span> Thim van Amersfoort </span>
               </p>
               <div class="flex space-x-1 text-sm text-gray-300">
-                <time datetime="2020-03-16"> Mar 16, 2020 </time>
+                <time id="templateDate"> Mar 16, 2020 </time>
               </div>
             </div>
           </div>
 
         </a>
-
-        <a href="#" class="py-3 px-4 border-2 border-gray-300 rounded-xl bg-gray-900/30 hover:border-fuchsia-400 transition-all duration-300 group block">
-
-          <!-- Text section -->
-          <div class="block mt-5">
-            <p class="text-xl font-semibold text-white group-hover:text-fuchsia-400 transition-all duration-300">
-              Boost your conversion rate
-            </p>
-            <p class="mt-3 text-base text-gray-300 font-mono leading-5">
-              Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.
-            </p>
-          </div>
-
-          <!-- Profile section -->
-          <div class="mt-6 flex items-center">
-            <div class="flex-shrink-0">
-              <span class="sr-only">Thim van Amersfoort</span>
-              <img class="h-10 w-10 rounded-full" src="https://avatars.githubusercontent.com/u/86324793?v=4" alt="">
-            </div>
-            <div class="ml-3">
-              <p class="text-sm text-white font-semibold">
-                <span> Thim van Amersfoort </span>
-              </p>
-              <div class="flex space-x-1 text-sm text-gray-300">
-                <time datetime="2020-03-16"> Mar 16, 2020 </time>
-              </div>
-            </div>
-          </div>
-
-        </a>
-
-        <a href="#" class="py-3 px-4 border-2 border-gray-300 rounded-xl bg-gray-900/30 hover:border-fuchsia-400 transition-all duration-300 group block">
-
-          <!-- Text section -->
-          <div class="block mt-5">
-            <p class="text-xl font-semibold text-white group-hover:text-fuchsia-400 transition-all duration-300">
-              Boost your conversion rate
-            </p>
-            <p class="mt-3 text-base text-gray-300 font-mono leading-5">
-              Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.
-            </p>
-          </div>
-
-          <!-- Profile section -->
-          <div class="mt-6 flex items-center">
-            <div class="flex-shrink-0">
-              <span class="sr-only">Thim van Amersfoort</span>
-              <img class="h-10 w-10 rounded-full" src="https://avatars.githubusercontent.com/u/86324793?v=4" alt="">
-            </div>
-            <div class="ml-3">
-              <p class="text-sm text-white font-semibold">
-                <span> Thim van Amersfoort </span>
-              </p>
-              <div class="flex space-x-1 text-sm text-gray-300">
-                <time datetime="2020-03-16"> Mar 16, 2020 </time>
-              </div>
-            </div>
-          </div>
-
-        </a>
-
 
       </div>
 
@@ -246,22 +186,16 @@
     </footer>
 
   </main>
-
-
-  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-  <script src="/assets/lib/smooth-scroll.polyfills.min.js"></script>
+  
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script> 
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="/assets/js/index.js"></script>
   <script>
 
-    const scroll = new SmoothScroll('button[data-smooth-scroll]', {
-      durationMax: 750,
-      durationMin: 350,
-      easing: 'easeInOutCubic',
-      speed: 650,
-      updateURL: false
-    });
+    AOS.init({ once: true, duration: 650 })
 
     const background = VANTA.WAVES({
       el: '#background',
