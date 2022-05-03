@@ -1197,6 +1197,10 @@ select {
   margin-right: 0.75rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1313,8 +1317,8 @@ select {
   width: 2.5rem;
 }
 
-.w-\[50\%\] {
-  width: 50%;
+.w-\[70\%\] {
+  width: 70%;
 }
 
 .w-full {
@@ -1648,6 +1652,11 @@ select {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .font-extrabold {
@@ -2081,6 +2090,10 @@ select {
 }
 
 @media (min-width: 563px) {
+  .prose-xs\:w-\[50\%\] {
+    width: 50%;
+  }
+
   .prose-xs\:rounded-lg {
     border-radius: 0.5rem;
   }
