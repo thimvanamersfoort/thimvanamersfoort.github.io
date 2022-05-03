@@ -25,10 +25,10 @@
   
   <main id="background" class="bg-gradient-to-br from-blue-500 via-indigo-600 to-cyan-500 flex flex-col min-h-screen">
 
-    <div class="mx-auto prose mt-16 prose-invert prose-p:text-gray-100 prose-img:mx-auto p-6 bg-gray-900/40 rounded-lg prose-figcaption:mt-0 prose-code:before:content-none prose-code:after:content-none">
-      
-      <img src="/assets/img/bandersnatch/logo.gif" alt="">
-      <img src="/assets/img/bandersnatch/play.png" alt="">
+    <div class="mx-auto prose mt-16 prose-invert prose-p:text-gray-100 prose-img:mx-auto p-6 bg-gray-900/40 rounded-lg prose-figcaption:mt-0 prose-code:before:content-none prose-code:after:content-none prose-code:py-1 prose-code:px-2 prose-code:bg-gray-900/60 prose-code:rounded-md prose-code:text-gray-300 mb-16 prose-img:cursor-pointer">
+    
+      <img src="/assets/img/bandersnatch/logo.gif" class="!cursor-auto" alt="">
+      <img src="/assets/img/bandersnatch/play.png" onclick="openImg()">
 
       <h1>Een van mijn eerste grote Softwareprojecten</h1>
       <p>Na het vak informatica gekozen te hebben in 4VWO, werden we er eigenlijk al gelijk in het diepe gegooid.
@@ -43,10 +43,10 @@
       </p>
 
       <h2>Hoe werkt het?</h2>
-      <img src="/assets/img/bandersnatch/start.png" alt="">
+      <img src="/assets/img/bandersnatch/start.png" onclick="openImg()">
 
       <p>De speler heeft verschillende keuzes in het verhaal. Vantevoren heb ik, samen met de klasgenoot waarmee ik dit project deed, het
-        verhaal volledig uitgeschreven. Alle opties, karakters, omgevingen en verhaallijnen waren hiermee al bepaald, en moesten we het alleen
+        verhaal volledig uitgeschreven (<i>in een flowchart</i>) . Alle opties, karakters, omgevingen en verhaallijnen waren hiermee al bepaald, en moesten we het alleen
         nog maar inprogrammeren.
       </p>
 
@@ -55,14 +55,39 @@
         op basis van een <i>Minecraft</i> representatie van de gamelevels. Het design van de game is ook het meeste handmatige werk gaan zitten.
       </p>
 
-      <img src="/assets/img/bandersnatch/pixel-art.gif" class="!mb-4 !mt-0" alt="">
+      <img src="/assets/img/bandersnatch/pixel-art.gif" class="mb-4 mt-0" onclick="openImg()">
       <figcaption><i>Zelfgemaakte Pixel-Art voor Bandersnatch</i></figcaption>
 
-      <code>
-        test1 <br>
-        test2
-      </code>
-      
+      <h2>Under the hood</h2>
+      <p>Sinds dat dit mijn eerste serieuze project was, is er in deze code weinig tot geen sprake van een vorm van MVC-layout, of Object Orientated Programming.
+        Om het toch een beetje te visualizeren, is de code als volgt opgebouwd:
+      </p>
+
+      <ol>
+        <li>De speler start het spel, hierdoor wordt de <code>gameView</code> geladen. Deze bestaat uit verschillende elementen (<i>tekstvelden, buttons, fotovelden, etc.</i>)
+        die zichtbaar worden wanneer nodig is, en aangepast kunnen worden via de <code>properties</code> van een element.</li>
+        <li>Vervolgens hebben we voor elk level (<i>en bijbehorende keuzes</i>) functies geschreven die de juiste elementen activeerden en aanpasten, toepasselijk 
+          aan de verhaallijn.</li>
+        <li>Als laatste hebben we al deze functies aan elkaar gelinkt in de broncode van de <code>gameView</code>, om zo de flowchart te implementeren.</li>
+      </ol>
+
+      <p>Hieronder kunt u de flowchart van de game Bandersnatch terugzien.</p>
+
+      <img src="/assets/img/bandersnatch/flowchart.png" class="mb-4" onclick="openImg()">
+      <figcaption><i>Flowchart voor Bandersnatch (levels &amp; keuzes)</i></figcaption>
+
+      <p>Voor meer informatie over dit project, bekijk het project op Github. Mocht je de game willen spelen, bouw dan de Visual Studio Solution
+      of vind een werkende versie van de game in de <code>/bin/Debug</code> folder in de Github-repo.</p>
+
+      <!-- Github button -->
+      <a href="https://github.com/thimvanamersfoort/bandersnatch" target="_blank" class="not-prose flex w-[50%] px-4 py-6 border-2 rounded-xl bg-gray-900/60 text-lg font-semibold text-center text-white border-white mt-20 mb-4 mx-auto hover:text-fuchsia-400 hover:border-fuchsia-400 transition-all duration-300 no-underline hover:shadow-lg justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mr-3 inline-block" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+        </svg>
+        <span class="relative top-[0.125rem]">Bekijk op Github</span>
+        
+      </a>
 
     </div>
 
@@ -149,6 +174,12 @@
       if(window.innerWidth <= 1024) background.setOptions({ waveSpeed: 0.9 })
       else background.setOptions({ waveSpeed: 1.4 })
     })
+
+    function openImg() {
+      if(event.target.src) {
+        window.open(event.target.src, '_blank')
+      }
+    }
 
   </script>
 
