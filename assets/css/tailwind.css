@@ -1885,6 +1885,11 @@ select {
   color: rgb(243 244 246 / var(--tw-text-opacity));
 }
 
+.hover\:prose-a\:text-fuchsia-300 :is(:where(a):not(:where([class~="not-prose"] *))):hover {
+  --tw-text-opacity: 1;
+  color: rgb(240 171 252 / var(--tw-text-opacity));
+}
+
 .prose-figcaption\:mt-0 :is(:where(figcaption):not(:where([class~="not-prose"] *))) {
   margin-top: 0px;
 }
@@ -1933,6 +1938,12 @@ select {
 
 .prose-img\:rounded-lg :is(:where(img):not(:where([class~="not-prose"] *))) {
   border-radius: 0.5rem;
+}
+
+.prose-img\:shadow-lg :is(:where(img):not(:where([class~="not-prose"] *))) {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 @media (min-width: 640px) {

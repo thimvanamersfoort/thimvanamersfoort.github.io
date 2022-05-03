@@ -77,7 +77,7 @@ setInterval(() => {
     },
     {
       title: 'HSO Hertzinger Password generator',
-      desc: 'Een simpele wachtwoordgenerator, geschreven in C# en .NET-Core. In opdracht van HSO Hertzinger.',
+      desc: 'Een simpele wachtwoordgenerator, geschreven in C# en .NET-Framework. In opdracht van HSO Hertzinger.',
       date: '24 November 2020',
       href: '/posts/password-generator.html'
     },
