@@ -14,7 +14,7 @@
   <link rel="shortcut icon" href="/assets/img/icon.ico" type="image/x-icon">
 
   <!-- Title -->
-  <title>HSO Hertzinger Password Generator | Thim van Amersfoort</title>
+  <title>De Wandelmannen Blog | Thim van Amersfoort</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/tailwind.css">
@@ -27,37 +27,35 @@
 
     <div class="mx-auto prose mt-16 prose-invert prose-xs:rounded-lg prose-p:text-gray-100 prose-img:mx-auto p-6 bg-gray-900/40  prose-figcaption:mt-0 prose-code:before:content-none prose-code:after:content-none prose-code:py-1 prose-code:px-2 prose-code:bg-gray-900/60 prose-code:rounded-md prose-code:text-gray-300 mb-16 prose-img:cursor-pointer prose-img:shadow-lg hover:prose-a:text-fuchsia-300">
 
-      <h1 class="mb-6">HSO Hertzinger Password Generator</h1>
+      <h1 class="mb-6">De Wandelmannen Blog</h1>
       <figcaption> <i>Klik op een afbeelding om deze te vergroten</i> </figcaption>
 
-      <img src="/assets/img/password-generator/home.png" class="mt-4" onclick="openImg()" alt="">
+      <img src="/assets/img/wandelmannen/home.png" class="mt-4" onclick="openImg()" alt="">
 
-      <p>Een simpele wachtwoordgenerator, in opdracht van <a href="https://www.hertzinger.com/" target="_blank">HSO Hertzinger</a>. 
-        In nood voor een wachtwoordgenerator (<i>bestaande uit willekeurige tekens, voor gebruik als standaard Wi-Fi wachtwoorden</i>) is deze applicatie ontworpen.
+      <p>De Wandelmannen is een project uitgevoerd voor een oom van mij. Na het lopen van de <i>Tour de Santiago de Compostella</i>, 
+      wilde hij deze memorabele reis graag ergens beschrijven, voor familie en vrienden om te volgen terwijl hij deze 13-daagse route 
+      aan het lopen was.</p>
+
+      <p>Na wat vooronderzoek gedaan te hebben, besloot ik dat een blog hiervoor de juiste optie was. Ik heb hiervoor een simpel blog gecreërd
+        in PHP, met een MySQL-database die blogdata, comments en paden naar foto's bijhoudt.
       </p>
 
-      <p>De broncode zelf stelt weinig voor. Geschreven in C# en de .NET-Core. Gebruikersinput wordt verzameld wat voor soort wachtwoorden er gegenereerd moeten worden (<i>zie 1e screenshot</i>)
-      en vervolgens worden er willekeurige tekens uit een <code>Array</code> gehaald om deze wachtwoorden samen te stellen.</p>
-
-      <blockquote>
-        Gegenereerde wachtwoorden kunnen geëxporteerd worden naar een Excel- of Wordbestand, gebruik makende van de C# <code>System.IO</code> Library.
-      </blockquote>
-
-      <h2>De bijbehorende installer:</h2>
-      <img src="/assets/img/password-generator/installer.png" onclick="openImg()" alt="">
-
-      <p>Om het gebruik voor de medewerkers van HSO Hertzinger makkelijker te maken, is er besloten een voorgeprogrammeerde installer bij te doen. 
-        De gebruikte installer hier is de <code>Visual Studio Installer Setup Project</code> (<i>inbegrepen bij het .NET-Framework</i>). 
+      <h2>Achterliggende code</h2>
+      <img src="/assets/img/wandelmannen/login.png" alt="">
+      <p>De PHP-code is ingedeeld op een manier waarop het voor mij (en eventuele andere contributeurs) makkelijk schaalbaar en overzichtelijk zou blijven.
+        De HTML-code is allemaal inbegrepen in de normale <code>.php</code>-bestanden, waar ook SSR op toegepast wordt. Extra helperklasses en functies zijn terug
+        te vinden in de <code>includes/*.inc.php</code>. Ook is er een <code>page-components/</code> folder, waar veelgebruikte paginaonderdelen bewaard worden (bijv. footers).
       </p>
 
-      <p>Hierbij is de standaardconfiguratie gebruikt, dus de broncode van de installer is niet inbegrepen in de Github-repo.
-        Wel is het mogelijk om een zelf installer toe te voegen aan de Visual Studio Solution. Hiervoor heb ik 
-        <a href="https://docs.microsoft.com/en-us/visualstudio/deployment/installer-projects-net-core?view=vs-2022" target="_blank">deze</a>
-        handleiding gebruikt.
-      </p>
+      <h3>Vernuftige functies:</h3>
+      <ul>
+        <li>Inloggen via Facebook om automatisch een bericht te plaatsen op de tijdlijn, wanneer er een nieuwe blogpost gemaakt is.</li>
+        <li>Gebruikers kunnen (anoniem) comments achterlaten, deze worden opgeslagen als een JSON String in de database.</li>
+        <li>Een carousel op de indexpagina die uitgelichte / meest gelezen blogposts roteert.</li>
+      </ul>
 
       <!-- Github button -->
-      <a href="https://github.com/thimvanamersfoort/HSO-password-generator" target="_blank" class="not-prose flex w-[70%] prose-xs:w-[50%] px-4 py-6 border-2 rounded-xl bg-gray-900/60 text-lg font-semibold text-center text-white border-white mt-20 mb-4 mx-auto hover:text-fuchsia-400 hover:border-fuchsia-400 transition-all duration-300 no-underline hover:shadow-lg justify-center">
+      <a href="https://github.com/thimvanamersfoort/wandelmannen" target="_blank" class="not-prose flex w-[70%] prose-xs:w-[50%] px-4 py-6 border-2 rounded-xl bg-gray-900/60 text-lg font-semibold text-center text-white border-white mt-20 mb-4 mx-auto hover:text-fuchsia-400 hover:border-fuchsia-400 transition-all duration-300 no-underline hover:shadow-lg justify-center">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mr-3 inline-block" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
           <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
