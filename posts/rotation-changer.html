@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta property="og:title" content="Portfolio | Thim van Amersfoort">
+  <meta property="og:description" content="Mijn naam is Thim van Amersfoort. Op dit portfolio vind je wat van mijn recente projecten.">
+  <meta property="og:url" content="https://thimvanamersfoort.github.io/">
+  <meta property="og:image" content="/assets/img/icon.png">
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/assets/img/icon.ico" type="image/x-icon">
+
+  <!-- Title -->
+  <title>Rotation Changer | Thim van Amersfoort</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+</head>
+<body>
+  
+  <main id="background" class="bg-gradient-to-br from-blue-500 via-indigo-600 to-cyan-500 flex flex-col min-h-screen">
+
+    <div class="mx-auto prose mt-16 prose-invert prose-xs:rounded-lg prose-p:text-gray-100 prose-img:mx-auto p-6 bg-gray-900/40  prose-figcaption:mt-0 prose-code:before:content-none prose-code:after:content-none prose-code:py-1 prose-code:px-2 prose-code:bg-gray-900/60 prose-code:rounded-md prose-code:text-gray-300 mb-16 prose-img:cursor-pointer prose-img:shadow-lg hover:prose-a:text-fuchsia-300 prose-hr:border-gray-300 prose-hr:my-8">
+
+      <h1>C# Screen Rotation Changer</h1>
+      <p>Na aanschaf van een flexibele monitorarm en op te merken dat ik hier best 
+        vaak gebruik van maakte (<i>en ook geregeld instellingen voor schermoriëntatie 
+        aan moest passen </i>), besloot ik dat dat proces simpeler kon.
+      </p>
+      
+      <hr>
+
+      <p>Deze Screen Rotation Changer, geschreven in C# en het .NET-Framework, herkent
+        op welke monitor het programma gestart is en vraagt informatie op over deze monitor
+        (<i>wat voor oriëntatie, naam, etc.</i>), om vervolgens via de Windows Native <code>user32.dll</code>
+        de rotatie van de monitor te updaten. 
+      </p>
+
+      <blockquote>
+        Doordat de Windows <code>user32.dll</code> hier gezien wordt als Unmanaged Code,
+        maakt de code gebruik van gestructureerde <code>Marshalls</code> voor de vertaling
+        van een Windows Library naar een bruikbare C# code interface. <br><br>
+
+        Een gepaste NuGet-package was hier op het moment van programmeren niet voor beschikbaar.
+      </blockquote>
+
+      <hr>
+
+      <p>Voel je vrij om de code van dit project te recyclen voor je eigen project. Een deel van de 
+        <code>user32.dll</code>-implementatie is ook te danken aan deze <a href="https://stackoverflow.com/users/6764710/yosh" target="_blank">StackOverflow-gebruiker</a>, voor het vertalen van alle binaire <code>user32.dll</code> code
+        naar C# Classes en Structures.
+      </p>
+
+      <!-- Github button -->
+      <a href="https://github.com/thimvanamersfoort/HSO-password-generator" target="_blank" class="not-prose flex w-[70%] prose-xs:w-[50%] px-4 py-6 border-2 rounded-xl bg-gray-900/60 text-lg font-semibold text-center text-white border-white mt-20 mb-4 mx-auto hover:text-fuchsia-400 hover:border-fuchsia-400 transition-all duration-300 no-underline hover:shadow-lg justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mr-3 inline-block" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+        </svg>
+        <span class="relative top-[0.125rem]">Bekijk op Github</span>
+        
+      </a>
+
+    </div>
+
+    <!-- Footer container -->
+    <footer class="h-32 from-transparent to-gray-900/90 bg-gradient-to-b mt-auto flex items-center">
+      <div class="w-8/12 justify-center mx-auto flex text-white my-auto">
+
+        <!-- Home -->
+        <a href="/" class="text-white transition-all duration-300 hover:text-fuchsia-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mx-3" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <polyline points="5 12 3 12 12 3 21 12 19 12" />
+            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+            <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+          </svg>
+        </a>
+
+        <!-- Stack Overflow -->
+        <a href="https://stackexchange.com/users/18782528/thim24?tab=accounts" target="_blank" class="text-white transition-all duration-300 hover:text-fuchsia-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mx-3" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+            <path d="M8 16h8" />
+            <path d="M8.322 12.582l7.956 .836" />
+            <path d="M8.787 9.168l7.826 1.664" />
+            <path d="M10.096 5.764l7.608 2.472" />
+          </svg>
+        </a>
+
+        <!-- Github -->
+        <a href="https://github.com/thimvanamersfoort" target="_blank" class="text-white transition-all duration-300 hover:text-fuchsia-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mx-3" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+          </svg>
+        </a>
+
+        <!-- LinkedIn -->
+        <a href="https://nl.linkedin.com/in/thim-van-amersfoort-936943221" target="_blank" class="text-white transition-all duration-300 hover:text-fuchsia-400">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mx-3" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+      </div>
+
+    </footer>
+
+  </main>
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script> 
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+
+    AOS.init({ once: true, duration: 650 })
+
+    const background = VANTA.WAVES({
+      el: '#background',
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: true,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x43169d, // 501ab9 , 4918aa , 43169d
+      shininess: 30.00,
+      waveHeight: 10.00,
+      waveSpeed: 1.4,
+      zoom: 0.7
+    })
+
+    if(window.innerWidth <= 640) background.setOptions({ waveSpeed: 0.9 })
+    else background.setOptions({ waveSpeed: 1.4 })
+
+    window.addEventListener('resize', (e) => {
+      if(window.innerWidth <= 1024) background.setOptions({ waveSpeed: 0.9 })
+      else background.setOptions({ waveSpeed: 1.4 })
+    })
+
+    const openImg = () => {
+      if(event.target.src) {
+        window.open(event.target.src, '_blank')
+      }
+    }
+
+  </script>
+
+</body>
+</html>
